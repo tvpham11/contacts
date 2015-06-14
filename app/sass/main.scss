@@ -1,0 +1,62 @@
+@import "app/sass/vendor/bourbon/bourbon";
+@import "app/sass/vendor/neat/neat";
+
+body {
+  background-color: #F5F5F1;
+  font-family: 'Dosis', Arial, sans-serif;
+}
+
+.container {
+  @include outer-container(100%);
+}
+
+fieldset {
+  max-width: 60%;
+  margin: 0px auto;
+  border: 2px lightgrey solid;
+  border-radius: 10px;
+}
+
+// label {
+//   float: left;
+//   width: 160px;
+//   clear: right;
+// }
+
+input[type="text"], select {
+  width: 250px;
+  font-size: 100%;
+  color: #5a5854;
+  background-color: #f2f2f2;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
+  margin-bottom: 10px;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid #2AA490;
+  }
+}
+
+.contacts {
+  @include span-columns(8);
+  display: block;
+  margin-top: 20px;
+
+  .contact {
+    border: 2px solid rgba(146,191,191,1);
+    border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 15px;
+
+    span.contact {
+      float: right;
+      color: white;
+      margin-top: 10px;
+      padding: 2px 5px;
+      border-radius: 5px;
+    }
+  }
+}

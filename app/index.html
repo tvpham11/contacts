@@ -1,24 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project Name</title>
+  <title>Contacts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/vendor/normalize.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700">
+  <link rel="stylesheet" href="css/vendor/font-awesome.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
   <div class="container">
+    <fieldset id="addContact">
+      <legend>Add Contact</legend>
+      <form>
 
-  </div>
+        <div id="firstName">
+          <label>
+            First Name:
+            <input type="text" id="firstNameField" placeholder="First Name">
+          </label>
+        </div> <!-- end firstName -->
+
+        <div id="lastName">
+          <label>
+            Last Name:
+            <input type="text" id="lastNameField" placeholder="Last Name">
+          </label>
+        </div> <!-- end lastName -->
+
+        <div id="dob">
+          <label>
+            Birthday:
+            <input type="text" id="birthdayField" placeholder="Birthday">
+          </label>
+        </div> <!-- end dob -->
+
+        <div id="phone">
+          <label>
+            Phone number:
+            <input type="text" id="phoneNoField" placeholder="Phone number">
+          </label>
+        </div> <!-- end phone -->
+
+        <div id="email">
+          <label>
+            Email address:
+            <input type="text" id="emailField" placeholder="Email address">
+          </label>
+        </div> <!-- end email -->
+
+        <div id="twitter">
+          <label>
+            Twitter:
+            <input type="text" id="twitterField" placeholder="Twitter ID">
+          </label>
+        </div> <!-- end twitter -->
+
+        <div id="linkedIn">
+          <label>
+            LinkedIn:
+            <input type="text" id="linkedInField" placeholder="LinkedIn URL">
+          </label>
+        </div> <!-- end email -->
+
+        <label>
+          Contact Category:
+          <select id="contactCat">
+            <option value="family">Family</option>
+            <option value="friends">Friends</option>
+            <option value="coworkers">Work Colleagues</option>
+            <option value="business">Professional Contacts</option>
+          </select> <!-- end contactCat -->
+        </label>
+
+        <div id="saveContact">
+          <button type="submit">Save</button>
+        </div> <!-- end button -->
+
+        <div id="reset">
+          <input type="reset" id="resetBtn" value="Reset">
+        </div> <!-- end button -->
+
+      </form> <!-- end contact form -->
+    </fieldset> <!-- end addContact -->
+
+    <ul id="contacts"></ul>
+
+  </div> <!-- end container -->
 
   <!-- VENDOR -->
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/underscore.js"></script>
+  <script src="js/vendor/backbone.js"></script>
   <script src="js/vendor/handlebars.js"></script>
   <!-- TEMPLATES -->
   <script src="js/templates.js"></script>
   <!-- MAIN -->
+  <script src="js/models/contact.model.js"></script>
+  <script src="js/collections/contact.collection.js"></script>
   <script src="js/main.js"></script>
 
 </body>

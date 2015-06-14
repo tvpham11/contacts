@@ -1,8 +1,30 @@
 this["template"] = this["template"] || {};
-this["template"]["example"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var helper;
+this["template"]["contact"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<h1>\n  "
-    + this.escapeExpression(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
-    + "\n</h1>\n";
+  return "<li class=\"contact\" id=\""
+    + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
+    + "\">\n  "
+    + alias3(((helper = (helper = helpers.firstName || (depth0 != null ? depth0.firstName : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"firstName","hash":{},"data":data}) : helper)))
+    + " "
+    + alias3(((helper = (helper = helpers.lastName || (depth0 != null ? depth0.lastName : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"lastName","hash":{},"data":data}) : helper)))
+    + " <br />\n  "
+    + alias3(((helper = (helper = helpers.dob || (depth0 != null ? depth0.dob : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"dob","hash":{},"data":data}) : helper)))
+    + " <br />\n  "
+    + alias3(((helper = (helper = helpers.phoneNo || (depth0 != null ? depth0.phoneNo : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"phoneNo","hash":{},"data":data}) : helper)))
+    + " <br />\n  <a href=\"mailto: "
+    + alias3(((helper = (helper = helpers.email || (depth0 != null ? depth0.email : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"email","hash":{},"data":data}) : helper)))
+    + "\">"
+    + alias3(((helper = (helper = helpers.email || (depth0 != null ? depth0.email : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"email","hash":{},"data":data}) : helper)))
+    + "</a> <br />\n  <a href=\"twitter.com/"
+    + alias3(((helper = (helper = helpers.twitter || (depth0 != null ? depth0.twitter : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"twitter","hash":{},"data":data}) : helper)))
+    + "\">"
+    + alias3(((helper = (helper = helpers.twitter || (depth0 != null ? depth0.twitter : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"twitter","hash":{},"data":data}) : helper)))
+    + "</a> <br />\n  <a href=\""
+    + alias3(((helper = (helper = helpers.linkedIn || (depth0 != null ? depth0.linkedIn : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"linkedIn","hash":{},"data":data}) : helper)))
+    + "\"> "
+    + alias3(((helper = (helper = helpers.linkedIn || (depth0 != null ? depth0.linkedIn : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"linkedIn","hash":{},"data":data}) : helper)))
+    + "</a> <br />\n  "
+    + alias3(((helper = (helper = helpers.contactCat || (depth0 != null ? depth0.contactCat : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"contactCat","hash":{},"data":data}) : helper)))
+    + " <br />\n  <span><i class=\"fa fa-minus-square-o\"></i></span>\n</li>\n";
 },"useData":true});
