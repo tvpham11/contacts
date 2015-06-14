@@ -39,7 +39,7 @@
         <div id="phone">
           <label>
             Phone number:
-            <input type="text" id="phoneNoField" placeholder="Phone number">
+            <input type="tel" id="phoneNoField" placeholder="Phone number">
           </label>
         </div> <!-- end phone -->
 
@@ -84,6 +84,17 @@
 
       </form> <!-- end contact form -->
     </fieldset> <!-- end addContact -->
+
+    <label>
+      Sort by:
+      <select id="sortCat">
+        <option value="firstNameAsc">First Name, Ascending</option>
+        <option value="firstNameDes">First Name, Descending</option>
+        <option value="lastNameAsc" selected="selected">Last Name, Ascending</option>
+        <option value="lastNameDes">Last Name, Descending</option>
+        <option value="contactCategory">Group</option>
+      </select> <!-- end sortCat -->
+    </label>
 
     <ul id="contacts"></ul>
 

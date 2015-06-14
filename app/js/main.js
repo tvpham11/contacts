@@ -40,7 +40,7 @@ var addContact = function(e) {
 
   // RESET FORM
 
-  this.reset();
+  // this.reset();
 
 };
 
@@ -49,6 +49,25 @@ var addContactToView = function(person) {
   var contactHtml = template.contact(person);
   $('#contacts').prepend(contactHtml);
 };
+
+// SORT CONTACTS
+$('#sortCat').change(function () {
+  var sortBy = $(this).find('#sortCat').val();
+
+  switch(sortBy) {
+    case 'First Name, Ascending': allContacts.sort();
+      break;
+    case 'First Name, Descending': allContacts.sort();
+      break;
+    case 'Last Name, Ascending': allContacts.sort();
+      break;
+    case 'Last Name, Descending': allContacts.sort();
+      break;
+    case 'Group': allContacts.sort();
+      break;
+  }
+
+});
 
 // DELETE CONTACT
 var deleteContact = function(e) {
@@ -73,7 +92,7 @@ $('#addContact').on('submit', addContact);
 
 $('#contacts').on('click', 'span', deleteContact);
 
-// MAINTAIN VIEW SAME AS COLLECTION INSTANCE
+// MAINTAIN VIEW SAME AS SERVER
 
 allContacts.fetch().done(function() {
   allContacts.each(function(model) {

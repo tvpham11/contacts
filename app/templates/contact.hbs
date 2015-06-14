@@ -1,10 +1,10 @@
 <li class="contact" id="{{ _id }}">
-  {{ firstName }} {{ lastName}} <br />
-  {{ dob }} <br />
-  {{ phoneNo }} <br />
-  <a href="mailto: {{ email }}">{{ email}}</a> <br />
-  <a href="twitter.com/{{ twitter }}">{{ twitter}}</a> <br />
-  <a href="{{ linkedIn }}"> {{ linkedIn }}</a> <br />
+  <i class="fa fa-user"></i>{{ firstName }} {{ lastName}} <br />
+  <i class="fa fa-birthday-cake"></i>{{ dob }} <br />
+  <i class="fa fa-phone"></i>{{ phoneNo }} <br />
+  <i class="fa fa-envelope-o"></i><a href="mailto: {{ email }}">{{ email}}</a> <br />
+  <i class="fa fa-twitter"></i><a href="twitter.com/{{ twitter }}">{{ twitter}}</a> <br />
+  <i class="fa fa-linkedin"></i><a href="{{ linkedIn }}"> {{ linkedIn }}</a> <br />
   {{ contactCat }} <br />
   <span><i class="fa fa-minus-square-o"></i></span>
 </li>
