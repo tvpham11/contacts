@@ -1,7 +1,6 @@
 ## Welcome to My Repo
 
-> This is a contacts app. Assignment 19.
-
+> This is a contacts app. Assignment 19. View deployed app at: http://development.tvp-tiy-contacts.divshot.io
 
 ## Usage
 
