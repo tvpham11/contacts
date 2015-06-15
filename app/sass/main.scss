@@ -7,12 +7,12 @@ body {
 }
 
 .container {
-  @include outer-container(100%);
+  @include outer-container();
+  width: 980px;
 }
 
 fieldset {
-  max-width: 60%;
-  margin: 0px auto;
+  @include span-columns(2.75);
   border: 2px lightgrey solid;
   border-radius: 10px;
 }
@@ -40,16 +40,25 @@ input[type="text"], input[type="tel"], select {
   }
 }
 
-.contacts {
-  @include span-columns(8);
-  display: block;
-  margin-top: 20px;
+#contacts {
+  @include span-columns(8.25);
 
   .contact {
-    border: 2px solid rgba(146,191,191,1);
+    border: 2px solid #92BFBF;
     border-radius: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     padding: 15px;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: #92BFBF;
+
+      &:hover {
+        text-decoration: underline;
+        color: #66D9EF;
+      }
+    }
 
     span.contact {
       float: right;
@@ -59,4 +68,12 @@ input[type="text"], input[type="tel"], select {
       border-radius: 5px;
     }
   }
+}
+
+#saveContact {
+  display: inline-block;
+}
+
+#reset {
+  display: inline-block;
 }
